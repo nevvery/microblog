@@ -1,2 +1,4 @@
 /.env
 /.flaskenv
+/migrations
+/app.db

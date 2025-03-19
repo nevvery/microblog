@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <div style="color: red">{{ message }}</div><br>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        {{ form.username.label }}<br>
+        {{ form.username(size=32) }}<br>
+        <br>
+        {{ form.password.label }}<br>
+        {{ form.password(size=32) }}<br>
+        <br>
+        {{ form.remember_me() }} {{ form.remember_me.label }}<br>
+        <br>
+        {{ form.submit() }}
+    </form>
+{% endblock %}
