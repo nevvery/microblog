@@ -12,6 +12,7 @@ login = LoginManager()
 basedir = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 template_folder = os.path.join(basedir, 'templates')
 
+
 def create_app(config_name=Config):
     app = Flask(__name__, template_folder=template_folder)
     app.config.from_object(config_name)
